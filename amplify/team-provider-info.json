@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lneapi-staging-c11f7-authRole",
+      "UnauthRoleArn": "arn:aws:iam::654654221376:role/amplify-lneapi-staging-c11f7-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::654654221376:role/amplify-lneapi-staging-c11f7-authRole",
+      "Region": "sa-east-1",
+      "DeploymentBucketName": "amplify-lneapi-staging-c11f7-deployment",
+      "UnauthRoleName": "amplify-lneapi-staging-c11f7-unauthRole",
+      "StackName": "amplify-lneapi-staging-c11f7",
+      "StackId": "arn:aws:cloudformation:sa-east-1:654654221376:stack/amplify-lneapi-staging-c11f7/33070440-3e48-11ef-a877-06dde9f9aa45",
+      "AmplifyAppId": "dkwuxyda7dftk"
+    }
+  }
+}
