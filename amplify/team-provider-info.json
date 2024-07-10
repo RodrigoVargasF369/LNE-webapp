@@ -10,6 +10,45 @@
       "StackName": "amplify-lneapi-staging-c11f7",
       "StackId": "arn:aws:cloudformation:sa-east-1:654654221376:stack/amplify-lneapi-staging-c11f7/33070440-3e48-11ef-a877-06dde9f9aa45",
       "AmplifyAppId": "dkwuxyda7dftk"
+    },
+    "categories": {
+      "function": {
+        "lneapi7784da3a": {}
+      },
+      "auth": {
+        "lneapi": {}
+      }
+    }
+  },
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lneapi-dev-aef37-authRole",
+      "UnauthRoleArn": "arn:aws:iam::654654221376:role/amplify-lneapi-dev-aef37-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::654654221376:role/amplify-lneapi-dev-aef37-authRole",
+      "Region": "sa-east-1",
+      "DeploymentBucketName": "amplify-lneapi-dev-aef37-deployment",
+      "UnauthRoleName": "amplify-lneapi-dev-aef37-unauthRole",
+      "StackName": "amplify-lneapi-dev-aef37",
+      "StackId": "arn:aws:cloudformation:sa-east-1:654654221376:stack/amplify-lneapi-dev-aef37/d8fcf650-3e4f-11ef-b9f4-06f7f934f901",
+      "AmplifyAppId": "d1zwnxbvntitc2",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-lneapi-dev-aef37-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "lneapi": {}
+      },
+      "function": {
+        "lneapi7784da3a": {
+          "deploymentBucketName": "amplify-lneapi-dev-aef37-deployment",
+          "s3Key": "amplify-builds/lneapi7784da3a-475a336e465856574143-build.zip"
+        }
+      },
+      "api": {
+        "APILNE": {}
+      },
+      "storage": {
+        "LNEDB": {}
+      }
     }
   }
 }

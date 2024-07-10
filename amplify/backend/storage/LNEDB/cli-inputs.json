@@ -1,0 +1,10 @@
+{
+  "resourceName": "LNEDB",
+  "tableName": "Prenda",
+  "partitionKey": {
+    "fieldName": "Id",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
