@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import {Amplify} from 'aws-amplify'
-import awsmobile from './aws-exports'
+import {awsmobile} from './aws-exports'
 
 Amplify.configure(awsmobile)
 
