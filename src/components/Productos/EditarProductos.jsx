@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { get, isCancelError } from "aws-amplify/api"
 import './productos.css'
 
-function Productos(){
+function EditarProductos(){
 
     const [ropas, setRopas] = useState([])
     const navigate = useNavigate()
@@ -19,11 +19,12 @@ function Productos(){
         } catch (error) {
             console.error('Error obteniendo las ropas:', error);
             alert('Error obteniendo las ropas.\nIntente más tarde');
+            
         }
     };
 
     const volver = ()=>{
-        navigate('/')
+        navigate('/redes')
     }
 
     useEffect(()=>{
@@ -55,7 +56,7 @@ function Productos(){
                         <p>
                             <span>Stock: ${r.CantidadInventario}</span>
                         </p>
-                        {/* <Link to={`/ropa/${r.Id}`}> Ver detalles</Link> */}
+                        {/* <Link to={`/editarproducto/${r.Id}`}> Ver detalles</Link> */}
                     </div>
                 );
             })}
@@ -64,4 +65,4 @@ function Productos(){
     )
 }
 
-export default Productos
+export default EditarProductos;

@@ -8,7 +8,7 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "lneapi7784da3a"
+          "resourceName": "lineapiropas"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -42,6 +42,11 @@
     }
   },
   "function": {
+    "lineapiropas": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "lneapi7784da3a": {
       "build": true,
       "providerPlugin": "awscloudformation",
@@ -49,6 +54,22 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_lineapiropas_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "lineapiropas"
+        }
+      ]
+    },
+    "AMPLIFY_function_lineapiropas_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "lineapiropas"
+        }
+      ]
+    },
     "AMPLIFY_function_lneapi7784da3a_deploymentBucketName": {
       "usedBy": [
         {

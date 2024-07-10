@@ -1,0 +1,46 @@
+.ropas-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.ropa-item {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ropa-item i {
+    image-rendering: auto;
+}
+
+.ropa-item h2 {
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.ropa-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ropa-item li {
+    margin-bottom: 10px;
+}
+
+.ropa-item li span{
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.ropa-item p {
+    margin-bottom: 20px;
+}
+
+.ropa-item span {
+    font-weight: bold;
+    margin-right: 10px;
+}

@@ -1,20 +1,11 @@
 {
   "version": 1,
   "paths": {
-    "/items": {
-      "name": "/items",
-      "lambdaFunction": "lneapi7784da3a",
+    "/ropas": {
+      "name": "/ropas",
+      "lambdaFunction": "lineapiropas",
       "permissions": {
-        "setting": "protected",
-        "auth": [
-          "create",
-          "read",
-          "update",
-          "delete"
-        ],
-        "guest": [
-          "read"
-        ]
+        "setting": "open"
       }
     }
   }

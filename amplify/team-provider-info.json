@@ -41,6 +41,10 @@
         "lneapi7784da3a": {
           "deploymentBucketName": "amplify-lneapi-dev-aef37-deployment",
           "s3Key": "amplify-builds/lneapi7784da3a-475a336e465856574143-build.zip"
+        },
+        "lineapiropas": {
+          "deploymentBucketName": "amplify-lneapi-dev-aef37-deployment",
+          "s3Key": "amplify-builds/lineapiropas-356853664c4955517059-build.zip"
         }
       },
       "api": {
