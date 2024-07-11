@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "paths": {
+    "/ropas": {
+      "name": "/ropas",
+      "lambdaFunction": "functionLNEAPI",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/categorias": {
+      "name": "/categorias",
+      "lambdaFunction": "lneAPIcats",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lnewa-dev-4dba0-authRole",
+      "UnauthRoleArn": "arn:aws:iam::654654221376:role/amplify-lnewa-dev-4dba0-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::654654221376:role/amplify-lnewa-dev-4dba0-authRole",
+      "Region": "sa-east-1",
+      "DeploymentBucketName": "amplify-lnewa-dev-4dba0-deployment",
+      "UnauthRoleName": "amplify-lnewa-dev-4dba0-unauthRole",
+      "StackName": "amplify-lnewa-dev-4dba0",
+      "StackId": "arn:aws:cloudformation:sa-east-1:654654221376:stack/amplify-lnewa-dev-4dba0/5f215b30-3fa5-11ef-9def-02473b6c3309",
+      "AmplifyAppId": "d3fp8f15mzbub6"
+    },
+    "categories": {
+      "function": {
+        "functionLNEAPI": {
+          "deploymentBucketName": "amplify-lnewa-dev-4dba0-deployment",
+          "s3Key": "amplify-builds/functionLNEAPI-4333456857666b423473-build.zip"
+        },
+        "lneAPIcats": {
+          "deploymentBucketName": "amplify-lnewa-dev-4dba0-deployment",
+          "s3Key": "amplify-builds/lneAPIcats-37363063775843374a59-build.zip"
+        }
+      },
+      "auth": {
+        "lnewa3030ca33": {}
+      },
+      "api": {
+        "LNEAPI": {}
+      },
+      "storage": {
+        "lneDB": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3fp8f15mzbub6",
+          "type": "cicd"
+        }
+      }
+    }
+  }
+}
