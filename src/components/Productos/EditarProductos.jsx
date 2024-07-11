@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
-import { get, isCancelError } from "aws-amplify/api"
+//import { get, isCancelError } from "aws-amplify/api"
 import './productos.css'
 
 function EditarProductos(){
@@ -8,20 +8,20 @@ function EditarProductos(){
     const [ropas, setRopas] = useState([])
     const navigate = useNavigate()
 
-    const getRopas = async () => {
-        try {
-            const response = await get({
-                apiName: 'APILNE',
-                path: '/ropas'
-            });
-            const data = await response.body.json();
-            setRopas(data);
-        } catch (error) {
-            console.error('Error obteniendo las ropas:', error);
-            alert('Error obteniendo las ropas.\nIntente más tarde');
+    // const getRopas = async () => {
+    //     try {
+    //         const response = await get({
+    //             apiName: 'APILNE',
+    //             path: '/ropas'
+    //         });
+    //         const data = await response.body.json();
+    //         setRopas(data);
+    //     } catch (error) {
+    //         console.error('Error obteniendo las ropas:', error);
+    //         alert('Error obteniendo las ropas.\nIntente más tarde');
             
-        }
-    };
+    //     }
+    // };
 
     const volver = ()=>{
         navigate('/redes')

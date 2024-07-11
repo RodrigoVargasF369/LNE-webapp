@@ -8,7 +8,6 @@ import EditarProducto from './components/Productos/EditarProducto';
 import Redes from './components/Redes/Redes';
 import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
-import { getCurrentUser } from 'aws-amplify/auth';
 import SignIn from './components/SignIn/SignIn';
 import ProtectedRoute from './ProtectedRoute';
 
