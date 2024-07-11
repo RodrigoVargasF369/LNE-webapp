@@ -22,10 +22,10 @@ function App() {
           <Route path='/signin' element={<SignIn></SignIn>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
           <Route path='/' element={<Home></Home>}></Route>
-          <Route path='/productos' element={<Productos></Productos>}></Route>
+          {/* <Route path='/productos' element={<Productos></Productos>}></Route> */}
           <Route path='/producto/:id' element={<Producto></Producto>}></Route>
-          <Route path='/editarproductos' element={<ProtectedRoute></ProtectedRoute>}></Route>
-          <Route path='/editarproductos' element={<EditarProductos></EditarProductos>}></Route>
+          {/* <Route path='/editarproductos' element={<ProtectedRoute></ProtectedRoute>}></Route> */}
+          {/* <Route path='/editarproductos' element={<EditarProductos></EditarProductos>}></Route> */}
           <Route path='/editarproducto/:id' element={<ProtectedRoute></ProtectedRoute>}></Route>
           <Route path='/editarproducto/:id' element={<EditarProducto></EditarProducto>}></Route>
           <Route path='/redes' element={<Redes></Redes>}></Route>
