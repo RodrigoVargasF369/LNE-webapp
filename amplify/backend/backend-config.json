@@ -13,6 +13,28 @@
       ],
       "providerPlugin": "awscloudformation",
       "service": "API Gateway"
+    },
+    "AdminQueries": {
+      "authorizationType": "AMAZON_COGNITO_USER_POOLS",
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "lneapi"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "AdminQueriesebe0109e"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
     }
   },
   "auth": {
@@ -39,21 +61,62 @@
       "providerPlugin": "awscloudformation",
       "service": "Cognito",
       "serviceType": "managed"
+    },
+    "userPoolGroups": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "lneapi"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito-UserPool-Groups"
     }
   },
   "function": {
-    "lineapiropas": {
+    "AdminQueriesebe0109e": {
       "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "lneapi"
+        }
+      ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
-    "lneapi7784da3a": {
+    "lineapiropas": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "parameters": {
+    "AMPLIFY_function_AdminQueriesebe0109e_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AdminQueriesebe0109e"
+        }
+      ]
+    },
+    "AMPLIFY_function_AdminQueriesebe0109e_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "AdminQueriesebe0109e"
+        }
+      ]
+    },
     "AMPLIFY_function_lineapiropas_deploymentBucketName": {
       "usedBy": [
         {
@@ -67,22 +130,6 @@
         {
           "category": "function",
           "resourceName": "lineapiropas"
-        }
-      ]
-    },
-    "AMPLIFY_function_lneapi7784da3a_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "lneapi7784da3a"
-        }
-      ]
-    },
-    "AMPLIFY_function_lneapi7784da3a_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "lneapi7784da3a"
         }
       ]
     }

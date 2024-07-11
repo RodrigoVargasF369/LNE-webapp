@@ -37,6 +37,26 @@
     "resourceName": "lneapi",
     "sharedId": "f0236ed4",
     "serviceName": "Cognito",
-    "useDefault": "manual"
+    "useDefault": "manual",
+    "authRoleArn": {
+      "Fn::GetAtt": [
+        "AuthRole",
+        "Arn"
+      ]
+    },
+    "unauthRoleArn": {
+      "Fn::GetAtt": [
+        "UnauthRole",
+        "Arn"
+      ]
+    },
+    "breakCircularDependency": true,
+    "useEnabledMfas": true,
+    "dependsOn": [],
+    "userPoolGroupList": [
+      "Admin",
+      "UserCommon"
+    ],
+    "adminQueryGroup": "Admin"
   }
 }

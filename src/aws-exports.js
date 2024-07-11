@@ -8,6 +8,11 @@ const awsmobile = {
             "name": "APILNE",
             "endpoint": "https://j7n30xspj7.execute-api.sa-east-1.amazonaws.com/dev",
             "region": "sa-east-1"
+        },
+        {
+            "name": "AdminQueries",
+            "endpoint": "https://96rp2do3hd.execute-api.sa-east-1.amazonaws.com/dev",
+            "region": "sa-east-1"
         }
     ],
     "aws_cognito_identity_pool_id": "sa-east-1:9dcdc734-3487-420a-89b4-753b936364d2",
