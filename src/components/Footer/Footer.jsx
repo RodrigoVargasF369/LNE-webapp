@@ -5,8 +5,8 @@ function Footer(){
         <footer className='footer'>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-12 text-center">
-                        <p className="copyright">&copy; LOGO 2022. All rights reserved</p>
+                    
+                        <p className="copyright">&copy; <img src={`${process.env.PUBLIC_URL}/logoNegativo.png`}></img> 2024. All rights reserved</p>
                         <ul className="social-icons">
                             <li>
                                 <a href="#" target='_blank' rel='noopener noreferrer'>
@@ -24,7 +24,6 @@ function Footer(){
                                 </a>
                             </li>
                         </ul>
-                    </div>
                 </div>
             </div>
         </footer>

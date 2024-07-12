@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
 import SignIn from './components/SignIn/SignIn';
 import ProtectedRoute from './ProtectedRoute';
+import './App.css'
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
           <Route path='/signin' element={<SignIn></SignIn>}></Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
           <Route path='/' element={<Home></Home>}></Route>
-          {/* <Route path='/productos' element={<Productos></Productos>}></Route> */}
+          <Route path='/productos' element={<Productos></Productos>}></Route>
           <Route path='/producto/:id' element={<Producto></Producto>}></Route>
           {/* <Route path='/editarproductos' element={<ProtectedRoute></ProtectedRoute>}></Route> */}
           {/* <Route path='/editarproductos' element={<EditarProductos></EditarProductos>}></Route> */}

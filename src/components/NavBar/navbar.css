@@ -1,14 +1,16 @@
 .navbar {
-    background-color: #0c153d;
+    background-color: #171343;
     color: #fff;
     padding: 1rem 0;
+    width: 100%;
+    
 }
 
 .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
 }
 

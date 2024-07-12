@@ -1,0 +1,22 @@
+/* global.css */
+
+/* Importa la fuente que deseas utilizar, por ejemplo, Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Aplica la fuente globalmente */
+html, body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Aplica la transición globalmente */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Asegúrate de que todos los elementos hereden estos estilos */
+*, *::before, *::after {
+    box-sizing: inherit;
+}

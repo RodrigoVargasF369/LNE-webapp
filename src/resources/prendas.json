@@ -1,0 +1,33 @@
+[
+    {
+      "Id": 1,
+      "Imagen": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/...",
+      "Nombre": "Camiseta",
+      "Descripcion": "Camiseta de algodón 100% de alta calidad",
+      "Precio": 19.99,
+      "CantidadInventario": 100,
+      "Tallas": ["S", "M", "L", "XL"],
+      "Colores": ["Rojo", "Azul", "Negro"]
+    },
+    {
+      "Id": 2,
+      "Imagen": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...",
+      "Nombre": "Jeans",
+      "Descripcion": "Jeans clásicos de mezclilla",
+      "Precio": 49.99,
+      "CantidadInventario": 50,
+      "Tallas": ["28", "30", "32", "34", "36"],
+      "Colores": ["Azul Oscuro", "Azul Claro"]
+    },
+    {
+      "Id": 3,
+      "Imagen": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/...",
+      "Nombre": "Zapatillas Deportivas",
+      "Descripcion": "Zapatillas deportivas cómodas y ligeras",
+      "Precio": 89.99,
+      "CantidadInventario": 200,
+      "Tallas": ["38", "39", "40", "41", "42", "43", "44"],
+      "Colores": ["Blanco", "Negro", "Gris"]
+    }
+  ]
+  

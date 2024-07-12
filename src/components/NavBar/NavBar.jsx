@@ -5,7 +5,7 @@ function NavBar(){
     return(
         <nav className="navbar">
             <div className="container">
-                <Link to='/' className="logo">logo</Link>
+                <Link to='/' className="logo"><img src={`${process.env.PUBLIC_URL}/favicon.ico`} alt="logo.png"></img></Link>
                 <ul className="nav-links">
                     <li>
                         <Link to='/'>Inicio</Link>
