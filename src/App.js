@@ -11,6 +11,7 @@ import NotFound from './components/NotFound/NotFound';
 import SignIn from './components/SignIn/SignIn';
 import ProtectedRoute from './ProtectedRoute';
 import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.bundle'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import './App.css'
 
