@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { useNavigate, Link } from "react-router-dom"
 import prendas from '../../resources/prendas.json'
 //import { get, isCancelError } from "aws-amplify/api"
-import './productos.css'
+//import './productos.css'
 
 function Productos(){
 
@@ -40,37 +40,28 @@ function Productos(){
         getRopas()
     }, [])
 
-
     return(
-        <div className="ropas-grid">
-            {ropas.length>0 && ropas.map(r=>{
-                return(
-                    <div key={r.Id} className="ropa-item">
-                        <image src={r.Imagen} alt={r.Nombre}></image>
-                        <h2>{r.Nombre}</h2>
-                        <p>{r.Descripcion}</p>
-                        <ul>
-                            <il>
-                                <span>Tallas:</span>
-                                {r.Tallas.map((talla)=>{return(<span key={talla}>{talla}</span>);})}
-                            </il>
-                            <il>
-                            <span>Colores:</span>
-                                {r.Colores.map((color)=>{return(<span key={color}>{color}</span>);})}
-                            </il>
-                        </ul>
-                        <p>
+        <div className="container-fluid mt-3">
+        <div className="row row-cols-2 row-cols-md-3 g-4">
+            {ropas.length>0 && ropas.map(r=>{return(
+            <div className="col ">
+                <div className="card">
+                    <img src={r.Imagen} className="card-img-top" alt={r.Nombre} style={{clipPath: '20px 20px 20px 20px'}}/>
+                    <div className="card-body">
+                        <h5 className="card-title">{r.Nombre}</h5>
+                        {/* <p className="card-text">
+                            <span>Tallas:</span>
+                            {r.Tallas.map((talla)=>{return(<span key={talla}>{talla}</span>);})}
+                        </p>
+                        <p className="card-text">
                             <span>Precio: ${r.Precio}</span>
-                        </p>
-                        <p>
-                            <span>Stock: {r.CantidadInventario}</span>
-                        </p>
-                        <Link to={`/producto/${r.Id}`}> Ver detalles</Link>
+                        </p> */}
+                        <Link className="text-primary" to={`/producto/${r.Id}`}> Ver detalles  <i className="bi bi-box-arrow-up-right"></i></Link>
                     </div>
-                );
-            })}
-            
-        </div>
+                </div>
+            </div>)})}
+        </div>  
+        </div>      
     )
 }
 
