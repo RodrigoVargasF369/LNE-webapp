@@ -35,7 +35,7 @@ function App() {
           <Route path='/redes' element={<Redes></Redes>}></Route>
         </Routes>
       </div>
-      <Footer/>
+      {/* <Footer/> */}
     </>
     </Router>
   );

@@ -12,24 +12,8 @@
       "AmplifyAppId": "d3fp8f15mzbub6"
     },
     "categories": {
-      "function": {
-        "functionLNEAPI": {
-          "deploymentBucketName": "amplify-lnewa-dev-4dba0-deployment",
-          "s3Key": "amplify-builds/functionLNEAPI-4333456857666b423473-build.zip"
-        },
-        "lneAPIcats": {
-          "deploymentBucketName": "amplify-lnewa-dev-4dba0-deployment",
-          "s3Key": "amplify-builds/lneAPIcats-37363063775843374a59-build.zip"
-        }
-      },
       "auth": {
         "lnewa3030ca33": {}
-      },
-      "api": {
-        "LNEAPI": {}
-      },
-      "storage": {
-        "lneDB": {}
       },
       "hosting": {
         "amplifyhosting": {

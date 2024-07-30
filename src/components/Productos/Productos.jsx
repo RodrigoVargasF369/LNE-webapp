@@ -41,17 +41,17 @@ function Productos(){
     }, [])
 
     return(
-        <div className="container-fluid mt-3">
+        <div className="container mt-3">
         <div className="row row-cols-2 row-cols-md-3 g-4">
             {ropas.length>0 && ropas.map(r=>{return(
             <div className="col ">
-                <div className="card">
-                    <img src={r.Imagen} className="card-img-top" alt={r.Nombre} style={{clipPath: '20px 20px 20px 20px'}}/>
+                <div className="card text-center">
+                    <img src={r.Imagen} className="card-img-top" alt={r.Nombre} style={{clipPath: 'inset(0% 50% 0% 0%)', transform: 'translate(25%)'}}/>
                     <div className="card-body">
                         <h5 className="card-title">{r.Nombre}</h5>
-                        {/* <p className="card-text">
+                        {/* <p className="carlla)=>{retud-text">
                             <span>Tallas:</span>
-                            {r.Tallas.map((talla)=>{return(<span key={talla}>{talla}</span>);})}
+                            {r.Tallas.map((tarn(<span key={talla}>{talla}</span>);})}
                         </p>
                         <p className="card-text">
                             <span>Precio: ${r.Precio}</span>

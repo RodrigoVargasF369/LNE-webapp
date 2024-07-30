@@ -1,28 +1,5 @@
 {
-  "api": {
-    "LNEAPI": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "Name",
-            "Arn"
-          ],
-          "category": "function",
-          "resourceName": "functionLNEAPI"
-        },
-        {
-          "attributes": [
-            "Name",
-            "Arn"
-          ],
-          "category": "function",
-          "resourceName": "lneAPIcats"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "API Gateway"
-    }
-  },
+  "api": {},
   "auth": {
     "lnewa3030ca33": {
       "customAuth": false,
@@ -49,19 +26,7 @@
       "service": "Cognito"
     }
   },
-  "function": {
-    "functionLNEAPI": {
-      "build": true,
-      "dependsOn": [],
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
-    "lneAPIcats": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    }
-  },
+  "function": {},
   "hosting": {
     "amplifyhosting": {
       "service": "amplifyhosting",
@@ -69,38 +34,6 @@
     }
   },
   "parameters": {
-    "AMPLIFY_function_functionLNEAPI_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "functionLNEAPI"
-        }
-      ]
-    },
-    "AMPLIFY_function_functionLNEAPI_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "functionLNEAPI"
-        }
-      ]
-    },
-    "AMPLIFY_function_lneAPIcats_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "lneAPIcats"
-        }
-      ]
-    },
-    "AMPLIFY_function_lneAPIcats_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "lneAPIcats"
-        }
-      ]
-    },
     "AMPLIFY_hosting_amplifyhosting_appId": {
       "usedBy": [
         {
@@ -118,10 +51,5 @@
       ]
     }
   },
-  "storage": {
-    "lneDB": {
-      "providerPlugin": "awscloudformation",
-      "service": "DynamoDB"
-    }
-  }
+  "storage": {}
 }

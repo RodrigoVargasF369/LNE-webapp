@@ -13,7 +13,7 @@ html, body {
 
 /* Aplica la transición globalmente */
 * {
-    transition: all 0.5s ease;
+    transition: all 1s ease;
 }
 
 /* Asegúrate de que todos los elementos hereden estos estilos */
@@ -27,4 +27,8 @@ html, body {
 
 .footer{
     background-color: #333;
+}
+
+:any-link{
+    text-decoration: none;
 }
