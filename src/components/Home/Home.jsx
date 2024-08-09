@@ -5,7 +5,7 @@ function Home(){
         <div className="container">
             <header className="py-5">
                 <div className="card text-bg-dark">
-                  <img src={`${process.env.PUBLIC_URL}/images/chicocremera.webp`} 
+                  <img src={`${process.env.PUBLIC_URL}/images/background.jpg`} 
                   className="card-img" alt="..." style={{
                     maxHeight: '340px', 
                     width: '100%', 
@@ -13,8 +13,8 @@ function Home(){
                     objectPosition: 'center'
                   }}/>
                   <div className="card-img-overlay d-flex flex-column justify-content-end align-items-start">
-                    <h5 className="card-title">El estilo que buscas</h5>
-                    <p className="card-text">Descripcion</p>
+                    <h5 className="card-title text-dark">El estilo que buscas</h5>
+                    <p className="card-text text-dark">Descripcion</p>
                     <Link to='/productos' className="btn btn-light">Ver nuestras remeras</Link>
                   </div>
                 </div>
