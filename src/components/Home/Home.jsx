@@ -5,7 +5,7 @@ function Home(){
         <div className="container">
             <header className="py-5">
                 <div className="card text-bg-dark">
-                  <img src={`${process.env.PUBLIC_URL}/images/chicocremera.jpeg`} 
+                  <img src={`${process.env.PUBLIC_URL}/images/chicocremera.webp`} 
                   className="card-img" alt="..." style={{
                     maxHeight: '340px', 
                     width: '100%', 
