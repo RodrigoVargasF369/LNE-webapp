@@ -12,14 +12,26 @@
       "AmplifyAppId": "d3fp8f15mzbub6"
     },
     "categories": {
-      "auth": {
-        "lnewa3030ca33": {}
-      },
       "hosting": {
         "amplifyhosting": {
           "appId": "d3fp8f15mzbub6",
           "type": "cicd"
         }
+      },
+      "function": {
+        "funclneAPI": {
+          "deploymentBucketName": "amplify-lnewa-dev-4dba0-deployment",
+          "s3Key": "amplify-builds/funclneAPI-466d4950424b53505a51-build.zip"
+        }
+      },
+      "api": {
+        "lneAPI": {}
+      },
+      "storage": {
+        "lneDB": {}
+      },
+      "auth": {
+        "lnewaaadfe8d5": {}
       }
     }
   }

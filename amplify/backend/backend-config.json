@@ -1,7 +1,22 @@
 {
-  "api": {},
+  "api": {
+    "lneAPI": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "funclneAPI"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
-    "lnewa3030ca33": {
+    "lnewaaadfe8d5": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -26,7 +41,27 @@
       "service": "Cognito"
     }
   },
-  "function": {},
+  "function": {
+    "funclneAPI": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "lneDB"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
   "hosting": {
     "amplifyhosting": {
       "service": "amplifyhosting",
@@ -34,6 +69,22 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_funclneAPI_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "funclneAPI"
+        }
+      ]
+    },
+    "AMPLIFY_function_funclneAPI_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "funclneAPI"
+        }
+      ]
+    },
     "AMPLIFY_hosting_amplifyhosting_appId": {
       "usedBy": [
         {
@@ -51,5 +102,10 @@
       ]
     }
   },
-  "storage": {}
+  "storage": {
+    "lneDB": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
+  }
 }

@@ -43,8 +43,8 @@ function Productos(){
     return(
         <div className="container mt-3">
         <div className="row row-cols-2 row-cols-md-3 g-4">
-            {ropas.length>0 && ropas.map(r=>{return(
-            <div className="col ">
+            {ropas.length>0 && ropas.map((r, index)=>{return(
+            <div className="col" key={index}>
                 <div className="card text-center">
                     <img src={r.Imagen} className="card-img-top" alt={r.Nombre} style={{clipPath: 'inset(0% 50% 0% 0%)', transform: 'translate(25%)'}}/>
                     <div className="card-body">

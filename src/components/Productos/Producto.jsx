@@ -53,14 +53,12 @@ function Producto(){
             </div>
           </div>
         </div>
-
         <br />
-        <br />
-
         <h3 className='text-start mb-6'>También te puede interesar</h3>
+        <br />
         <div className="row row-cols-2 row-cols-md-3 g-4">
-          {prendas.filter(p => p.Id !== producto.Id).map(p=> (
-              <Link to={`/producto/${p.Id}`}>
+          {prendas.filter(p => p.Id !== producto.Id).map((p, index)=> (
+              <Link to={`/producto/${p.Id}`} key={index}>
                 <div className="col text-center">
                 <div className="card">
                   <img src={p.Imagen} style={{clipPath: 'inset(0% 50% 0% 0%)', transform: 'translate(25%)'}} className="card-img-top" alt={p.Nombre}/>

@@ -29,10 +29,10 @@ function App() {
           <Route path='/productos' element={<Productos></Productos>}></Route>
           <Route path='/producto/:id' element={<Producto></Producto>}></Route>
           {/* <Route path='/editarproductos' element={<ProtectedRoute></ProtectedRoute>}></Route> */}
-          {/* <Route path='/editarproductos' element={<EditarProductos></EditarProductos>}></Route> */}
-          <Route path='/editarproducto/:id' element={<ProtectedRoute></ProtectedRoute>}></Route>
+          <Route path='/editarproductos' element={<EditarProductos></EditarProductos>}></Route>
+          {/* <Route path='/editarproducto/:id' element={<ProtectedRoute></ProtectedRoute>}></Route> */}
           <Route path='/editarproducto/:id' element={<EditarProducto></EditarProducto>}></Route>
-          <Route path='/redes' element={<Redes></Redes>}></Route>
+          {/* <Route path='/redes' element={<Redes></Redes>}></Route> */}
         </Routes>
       </div>
       {/* <Footer/> */}

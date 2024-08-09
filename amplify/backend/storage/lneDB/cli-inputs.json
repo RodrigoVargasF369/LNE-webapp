@@ -1,0 +1,10 @@
+{
+  "resourceName": "lneDB",
+  "tableName": "ropas",
+  "partitionKey": {
+    "fieldName": "Id",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

@@ -26,9 +26,6 @@ function NavBar(){
               <li className="nav-item">
                 <Link className="nav-link text-white" to='/productos'>Catálogo</Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link text-white" to='/redes'>Seguinos</Link>
-              </li>
             </ul>
           </div>
         </div>

@@ -1,68 +1,96 @@
-// import { useState, useEffect } from "react"
-// import { useNavigate } from "react-router-dom"
-// //import { get, isCancelError } from "aws-amplify/api"
-// import './productos.css'
+import { useState, useEffect } from "react"
+import { Link, useNavigate } from "react-router-dom"
+import { get, del} from "aws-amplify/api"
+import './productos.css'
 
-// function EditarProductos(){
+function EditarProductos(){
 
-//     const [ropas, setRopas] = useState([])
-//     const navigate = useNavigate()
+    const [ropas, setRopas] = useState([])
+    const navigate = useNavigate()
+    
+    useEffect(()=>{
+        getRopas()
+    }, [])
+    
+    const getRopas = async () => {
+        try {
+            const {body} = await get({
+                apiName: 'lneAPI',
+                path: '/ropas'
+            }).response;
+            const data = await body.json();
+            console.log(data)
+            setRopas(data);
+        } catch (error) {
+            console.error('Error obteniendo las ropas:', error);
+            alert('Error obteniendo las ropas.\nIntente más tarde');
+            volver();
+        }
+    };
 
-//     // const getRopas = async () => {
-//     //     try {
-//     //         const response = await get({
-//     //             apiName: 'APILNE',
-//     //             path: '/ropas'
-//     //         });
-//     //         const data = await response.body.json();
-//     //         setRopas(data);
-//     //     } catch (error) {
-//     //         console.error('Error obteniendo las ropas:', error);
-//     //         alert('Error obteniendo las ropas.\nIntente más tarde');
-            
-//     //     }
-//     // };
+    const volver = ()=>{
+        navigate('/')
+    }
 
-//     const volver = ()=>{
-//         navigate('/redes')
-//     }
-
-//     useEffect(()=>{
-//         getRopas()
-//     }, [])
+    const deleteRopa = async (id) => {
+        if (window.confirm("¿Borrar esta ropa de la lista?")) {
+            try{
+                const response = await del({
+                    apiName: 'lneAPI',
+                    path: `/ropas/${id}`});
+                console.log(response)
+                getRopas();
+            }catch(error){
+                console.error('Error eliminando ropa:', error);
+                alert('Error eliminando ropa especificada.\nIntente más tarde');
+            }
+        }
+      };
 
 
-//     return(
-//         <div className="ropas-grid">
-//             {ropas.length>0 && ropas.map(r=>{
-//                 return(
-//                     <div key={r.Id} className="ropa-item">
-//                         <i>{r.Imagen}</i>
-//                         <h2>{r.Nombre}</h2>
-//                         <p>{r.Descripcion}</p>
-//                         <ul>
-//                             <il>
-//                                 <span>Tallas</span>
-//                                 {ropas.Tallas.map((talla)=>{return(<span key={talla}>{talla}</span>);})}
-//                             </il>
-//                             <il>
-//                             <span>Colores</span>
-//                                 {ropas.Colores.map((color)=>{return(<span key={color}>{color}</span>);})}
-//                             </il>
-//                         </ul>
-//                         <p>
-//                             <span>Precio: ${r.Precio}</span>
-//                         </p>
-//                         <p>
-//                             <span>Stock: ${r.CantidadInventario}</span>
-//                         </p>
-//                         {/* <Link to={`/editarproducto/${r.Id}`}> Ver detalles</Link> */}
-//                     </div>
-//                 );
-//             })}
-            
-//         </div>
-//     )
-// }
+    return(
+    <div className="container">
+        <div className="text-start">
+          <table className="table mt-5">
+            <thead className="table-dark">
+              <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+                <th>Tallas</th>
+                <th><Link className="btn text-white" to='/editarproducto/0'><i className="bi bi-plus-circle"></i> Agregar ropa nueva</Link></th>
+              </tr>
+            </thead>
+            <tbody>
+              {ropas &&
+                ropas.map((r) => {
+                  return (
+                    <tr key={r.Id}>
+                      <td><img src={r.Imagen} alt='...' /></td>
+                      <td>{r.Nombre}</td>
+                      <td>{r.Descripcion}</td>
+                      <td>{r.Precio}</td>
+                      <td>{r.Tallas.join('-')}</td>
+                      <td>
+                        <button
+                          className="btn btn-default"
+                          onClick={() => deleteRopa(r.Id)}
+                        >
+                          <i className="bi bi-trash3 text-danger"></i>
+                        </button>
+                        <Link className="btn btn-default" to={`/editarproducto/${r.Id}`} >
+                            <i className="bi bi-pencil text-primary"></i>
+                        </Link>
+                      </td>
+                    </tr>
+                  );
+                })}
+            </tbody>
+          </table>
+        </div>
+    </div>    
+    )
+}
 
-// export default EditarProductos;
+export default EditarProductos;
