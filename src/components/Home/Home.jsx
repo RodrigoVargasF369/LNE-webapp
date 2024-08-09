@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 function Home(){
     return(
-        <div className="container">
+        <div className="container-fluid">
             <header className="py-5">
                 <div className="card text-bg-dark">
                   <img src={`${process.env.PUBLIC_URL}/images/background.jpg`} 

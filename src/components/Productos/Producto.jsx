@@ -21,7 +21,7 @@ function Producto(){
 
             <div className="col-md-8">
               {/* <img src={producto.Imagen} alt={producto.Nombre} className="img-fluid" /> */}
-            <div id="carouselExample" className="carousel slide mt-3 mb-3">
+            <div id="carouselExample" className="carousel slide mt-3 mb-3" data-bs-ride="carousel" data-bs-interval="3000">
               <div className="carousel-inner">
                 <div className="carousel-item active">
                   <img src={producto.Imagen} style={{clipPath: 'inset(0% 50% 0% 0%)', transform: 'translate(25%)'}} className="d-block w-100" alt="..."/>
@@ -48,7 +48,9 @@ function Producto(){
                 <p className='card-text'>{producto.Descripcion}</p>
                 <p className='card-text'>Precio: ${producto.Precio}</p>
                 <p className='card-text'>Tallas: {producto.Tallas.join(' - ')}</p>
-                <p className="card-text"><small className="text-body-secondary">Para comprar contactanos por Whatsapp <i className="bi bi-whatsapp"></i> al: +54 9 351 XXX-XXXX</small></p>
+                <p className="card-text"><small className="text-body-secondary">Para comprar contactanos por Whatsapp <i className="bi bi-whatsapp"></i> al: 
+                <a href="https://wa.me/+5493516508823/" target="_blank" rel="noreferrer noopener">+54 9 351 650-8823</a>
+                </small></p>
               </div>
             </div>
           </div>
