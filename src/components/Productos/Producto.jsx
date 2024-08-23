@@ -16,7 +16,7 @@ function Producto(){
   
     return(
       <div className="container">
-        <div className="card mb-3 mt-3">
+        <div className="card border-0 mb-3 mt-3">
           <div className="row g-0">
 
             <div className="col-md-8">
@@ -62,7 +62,7 @@ function Producto(){
           {prendas.filter(p => p.Id !== producto.Id).map((p, index)=> (
               <Link to={`/producto/${p.Id}`} key={index}>
                 <div className="col text-center">
-                <div className="card">
+                <div className="card border-0">
                   <img src={p.Imagen} style={{clipPath: 'inset(0% 50% 0% 0%)', transform: 'translate(25%)'}} className="card-img-top" alt={p.Nombre}/>
                   <div className="card-body">
                     <h5 className="card-title">{p.Nombre}</h5>

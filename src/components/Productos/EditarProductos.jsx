@@ -35,10 +35,10 @@ function EditarProductos(){
     const deleteRopa = async (id) => {
         if (window.confirm("¿Borrar esta ropa de la lista?")) {
             try{
-                const response = await del({
+                const {statusCode} = await del({
                     apiName: 'lneAPI',
-                    path: `/ropas/${id}`});
-                console.log(response)
+                    path: `/ropas/${id}`}).response;
+                console.log(statusCode)
                 getRopas();
             }catch(error){
                 console.error('Error eliminando ropa:', error);

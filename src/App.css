@@ -22,7 +22,11 @@ html, body {
 }
 
 .navbar{
-    background-color: #171343;
+    /* background-color: #171343; */
+    background-color: #070c27;
+}
+.navbar .offcanvas{
+    background-color: #070c27;
 }
 
 .footer{

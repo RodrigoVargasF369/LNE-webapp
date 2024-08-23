@@ -2,20 +2,20 @@ import { Link } from "react-router-dom"
 
 function Home(){
     return(
-        <div className="container-fluid">
-            <header className="py-5">
-                <div className="card text-bg-dark">
+        <div>
+            <header className="">
+                <div className="card text-bg-dark bg-opacity-75 rounded-0">
                   <img src={`${process.env.PUBLIC_URL}/images/background.jpg`} 
-                  className="card-img" alt="..." style={{
+                  className="card-img rounded-0" alt="..." style={{
                     maxHeight: '340px', 
                     width: '100%', 
                     objectFit: 'cover', 
                     objectPosition: 'center'
                   }}/>
                   <div className="card-img-overlay d-flex flex-column justify-content-end align-items-start">
-                    <h5 className="card-title text-dark">El estilo que buscas</h5>
-                    <p className="card-text text-dark">Descripcion</p>
-                    <Link to='/productos' className="btn btn-light">Ver nuestras remeras</Link>
+                    <h5 className="card-title text-dark">Elegí tu propio estilo</h5>
+                    {/* <p className="card-text text-dark">Descripcion</p> */}
+                    <Link to='/productos' className="btn btn-light mt-3">Ver nuestras remeras <i className="bi bi-box-arrow-up-right"></i></Link>
                   </div>
                 </div>
             </header>
@@ -64,20 +64,13 @@ function Home(){
                 </div>
             </section> */}
 
-            <section className="py-5">
-                <div className="text-start">
-                    <h3>Seguinos en redes</h3>
-                </div>
-              <div className="card mt-3" style={{width: '13rem'}}> 
-                <a href="https://www.instagram.com/loyalty.clothess" target="_blank" rel="noreferrer noopener">
-                  <div className="mt-3 ms-3 me-3">
-                    <img src={`${process.env.PUBLIC_URL}/images/Instagram_logo_2022.png`} className="card-img-top" alt="..."/>
-                    <div className="card-body text-center">
-                      <p className="card-text">@Loyalty.Clothess</p>
+            <section className="py-5 ms-3 fixed-bottom">
+                <div className="container text-start">
+                    <div className="row">
+                        <div className="col-1"><a href="https://www.instagram.com/loyalty.clothess" target="_blank" rel="noreferrer noopener"><i className="bi bi-instagram text-dark"></i></a></div>
+                        <div className="col-1"><a href="https://www.tiktok.com/@loyaltycordoba" target="_blank" rel="noreferrer noopener"><i className="bi bi-tiktok text-dark"></i></a></div>
                     </div>
-                  </div>
-                </a>
-              </div>
+                </div>
             </section>
         </div>
     )
