@@ -5,7 +5,7 @@ function Home(){
         <div>
             <header className="">
                 <div className="card border-0 rounded-0">
-                  <img src={`${process.env.PUBLIC_URL}/images/banner_2.jpg`} 
+                  <img src={`${process.env.PUBLIC_URL}/images/banner_loyalty(1920×600).png`} 
                   className="card-img rounded-0" alt="..." style={{
                     width: '100%', 
                     objectFit: 'cover', 
